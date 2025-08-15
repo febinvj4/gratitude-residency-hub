@@ -79,14 +79,12 @@ export function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="bg-primary rounded-lg p-2 text-primary-foreground font-bold text-xl">
-              GRC
-            </div>
-            <div className="hidden sm:block">
-              <div className="text-lg font-bold text-foreground">Gratitude Residency</div>
-              <div className="text-sm text-muted-foreground -mt-1">& Citizenship</div>
-            </div>
+          <Link to="/" className="flex items-center">
+            <img 
+              src="/lovable-uploads/8e7c39f0-ed56-4618-9880-e05c2d6a5038.png" 
+              alt="Gratitude Residency & Citizenship" 
+              className="h-10 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}
