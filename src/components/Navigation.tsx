@@ -83,7 +83,7 @@ export function Navigation() {
             <img 
               src="/lovable-uploads/8e7c39f0-ed56-4618-9880-e05c2d6a5038.png" 
               alt="Gratitude Residency & Citizenship" 
-              className="h-10 w-auto"
+              className="h-16 w-auto"
             />
           </Link>
 
