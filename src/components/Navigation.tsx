@@ -76,8 +76,7 @@ const simpleMenuItems = [
   { name: "Home", href: "/" },
   { name: "Business Migration", href: "/business-migration" },
   { name: "Testimonials", href: "/testimonials" },
-  { name: "About Us", href: "/about" },
-  { name: "Apply Now", href: "/apply" }
+  { name: "About Us", href: "/about" }
 ];
 
 export function Navigation() {
@@ -92,7 +91,7 @@ export function Navigation() {
             <img 
               src="/lovable-uploads/8e7c39f0-ed56-4618-9880-e05c2d6a5038.png" 
               alt="Gratitude Residency & Citizenship" 
-              className="h-32 w-auto"
+              className="h-64 w-auto"
             />
           </Link>
 
@@ -173,7 +172,7 @@ export function Navigation() {
               <Link to="/contact">Contact Us</Link>
             </Button>
             <Button asChild>
-              <Link to="/consultation">Free Consultation</Link>
+              <Link to="/consultation">Book Now</Link>
             </Button>
           </div>
 
@@ -237,7 +236,7 @@ export function Navigation() {
                   <Button variant="outline" className="w-full">Contact Us</Button>
                 </Link>
                 <Link to="/consultation" className="block w-full">
-                  <Button className="w-full">Free Consultation</Button>
+                  <Button className="w-full">Book Now</Button>
                 </Link>
               </div>
             </div>
