@@ -13,63 +13,72 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 const navigationData = {
-  australia: {
-    title: "Australia",
-    items: [
-      { name: "Skilled Migration 189", href: "/australia/skilled-189" },
-      { name: "Skilled Migration 190", href: "/australia/skilled-190" },
-      { name: "Skilled Migration 491", href: "/australia/skilled-491" },
-      { name: "Partner Visa", href: "/australia/partner-visa" },
-      { name: "Visit Visa", href: "/australia/visit-visa" },
-      { name: "Business Visa", href: "/australia/business-visa" },
-      { name: "Study Visa", href: "/australia/study-visa" },
-    ]
-  },
-  canada: {
-    title: "Canada",
-    items: [
-      { name: "Express Entry", href: "/canada/express-entry" },
-      { name: "PNP", href: "/canada/pnp" },
-      { name: "Atlantic Immigration", href: "/canada/atlantic" },
-      { name: "RNIP", href: "/canada/rnip" },
-      { name: "LMIA", href: "/canada/lmia" },
-      { name: "Visitor Visa", href: "/canada/visitor-visa" },
-      { name: "Study Visa", href: "/canada/study-visa" },
-    ]
-  },
-  newZealand: {
-    title: "New Zealand",
-    items: [
-      { name: "Skilled Migrant Category", href: "/new-zealand/skilled-migrant" },
-      { name: "Work Visa", href: "/new-zealand/work-visa" },
-      { name: "Visitor Visa", href: "/new-zealand/visitor-visa" },
-      { name: "Student Visa", href: "/new-zealand/student-visa" },
-    ]
-  },
-  europe: {
-    title: "Europe",
-    items: [
-      { name: "Germany - Work Permits", href: "/europe/germany-work" },
-      { name: "Germany - Visit Visa", href: "/europe/germany-visit" },
-      { name: "Germany - Opportunity Card", href: "/europe/germany-opportunity" },
-      { name: "Portugal - Work Permits", href: "/europe/portugal-work" },
-      { name: "Portugal - D2 Visa", href: "/europe/portugal-d2" },
-      { name: "Portugal - D7 Visa", href: "/europe/portugal-d7" },
-      { name: "Portugal - Job Seeker", href: "/europe/portugal-jobseeker" },
-      { name: "Slovakia", href: "/europe/slovakia" },
-      { name: "Serbia", href: "/europe/serbia" },
-      { name: "Bulgaria", href: "/europe/bulgaria" },
-    ]
-  },
-  secondPassport: {
-    title: "Second Passport",
-    items: [
-      { name: "Investment Programs", href: "/second-passport/investment" },
-      { name: "Citizenship by Descent", href: "/second-passport/descent" },
-      { name: "Naturalization", href: "/second-passport/naturalization" },
+  skilledMigration: {
+    title: "Skilled Migration",
+    countries: [
+      {
+        name: "Australia",
+        href: "/australia",
+        items: [
+          { name: "Skilled Migration 189", href: "/australia/skilled-189" },
+          { name: "Skilled Migration 190", href: "/australia/skilled-190" },
+          { name: "Skilled Migration 491", href: "/australia/skilled-491" },
+          { name: "Partner Visa", href: "/australia/partner-visa" },
+          { name: "Visit Visa", href: "/australia/visit-visa" },
+          { name: "Business Visa", href: "/australia/business-visa" },
+          { name: "Study Visa", href: "/australia/study-visa" },
+        ]
+      },
+      {
+        name: "Canada",
+        href: "/canada",
+        items: [
+          { name: "Express Entry", href: "/canada/express-entry" },
+          { name: "PNP", href: "/canada/pnp" },
+          { name: "Atlantic Immigration", href: "/canada/atlantic" },
+          { name: "RNIP", href: "/canada/rnip" },
+          { name: "LMIA", href: "/canada/lmia" },
+          { name: "Visitor Visa", href: "/canada/visitor-visa" },
+          { name: "Study Visa", href: "/canada/study-visa" },
+        ]
+      },
+      {
+        name: "New Zealand",
+        href: "/new-zealand",
+        items: [
+          { name: "Skilled Migrant Category", href: "/new-zealand/skilled-migrant" },
+          { name: "Work Visa", href: "/new-zealand/work-visa" },
+          { name: "Visitor Visa", href: "/new-zealand/visitor-visa" },
+          { name: "Student Visa", href: "/new-zealand/student-visa" },
+        ]
+      },
+      {
+        name: "Europe",
+        href: "/europe",
+        items: [
+          { name: "Germany - Work Permits", href: "/europe/germany-work" },
+          { name: "Germany - Visit Visa", href: "/europe/germany-visit" },
+          { name: "Germany - Opportunity Card", href: "/europe/germany-opportunity" },
+          { name: "Portugal - Work Permits", href: "/europe/portugal-work" },
+          { name: "Portugal - D2 Visa", href: "/europe/portugal-d2" },
+          { name: "Portugal - D7 Visa", href: "/europe/portugal-d7" },
+          { name: "Portugal - Job Seeker", href: "/europe/portugal-jobseeker" },
+          { name: "Slovakia", href: "/europe/slovakia" },
+          { name: "Serbia", href: "/europe/serbia" },
+          { name: "Bulgaria", href: "/europe/bulgaria" },
+        ]
+      }
     ]
   }
 };
+
+const simpleMenuItems = [
+  { name: "Home", href: "/" },
+  { name: "Business Migration", href: "/business-migration" },
+  { name: "Testimonials", href: "/testimonials" },
+  { name: "About Us", href: "/about" },
+  { name: "Apply Now", href: "/apply" }
+];
 
 export function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -90,27 +99,69 @@ export function Navigation() {
           {/* Desktop Navigation */}
           <NavigationMenu className="hidden lg:flex">
             <NavigationMenuList>
-              {Object.entries(navigationData).map(([key, category]) => (
-                <NavigationMenuItem key={key}>
-                  <NavigationMenuTrigger className="bg-transparent hover:bg-muted transition-colors">
-                    {category.title}
-                  </NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <div className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                      {category.items.map((item) => (
-                        <NavigationMenuLink key={item.href} asChild>
-                          <Link
-                            to={item.href}
-                            className={cn(
-                              "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                            )}
-                          >
-                            <div className="text-sm font-medium leading-none">{item.name}</div>
+              {/* Simple menu items */}
+              {simpleMenuItems.slice(0, 1).map((item) => (
+                <NavigationMenuItem key={item.href}>
+                  <NavigationMenuLink asChild>
+                    <Link
+                      to={item.href}
+                      className={cn(
+                        "group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50"
+                      )}
+                    >
+                      {item.name}
+                    </Link>
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
+              ))}
+              
+              {/* Skilled Migration Dropdown */}
+              <NavigationMenuItem>
+                <NavigationMenuTrigger className="bg-transparent hover:bg-muted transition-colors">
+                  Skilled Migration
+                </NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <div className="grid w-[800px] gap-6 p-6 md:grid-cols-2 lg:grid-cols-4">
+                    {navigationData.skilledMigration.countries.map((country) => (
+                      <div key={country.href} className="space-y-3">
+                        <h3 className="font-medium leading-none">
+                          <Link to={country.href} className="hover:underline">
+                            {country.name}
                           </Link>
-                        </NavigationMenuLink>
-                      ))}
-                    </div>
-                  </NavigationMenuContent>
+                        </h3>
+                        <div className="space-y-1">
+                          {country.items.slice(0, 4).map((item) => (
+                            <NavigationMenuLink key={item.href} asChild>
+                              <Link
+                                to={item.href}
+                                className={cn(
+                                  "block select-none space-y-1 rounded-md p-2 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground text-xs"
+                                )}
+                              >
+                                {item.name}
+                              </Link>
+                            </NavigationMenuLink>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+
+              {/* Other simple menu items */}
+              {simpleMenuItems.slice(1).map((item) => (
+                <NavigationMenuItem key={item.href}>
+                  <NavigationMenuLink asChild>
+                    <Link
+                      to={item.href}
+                      className={cn(
+                        "group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50"
+                      )}
+                    >
+                      {item.name}
+                    </Link>
+                  </NavigationMenuLink>
                 </NavigationMenuItem>
               ))}
             </NavigationMenuList>
@@ -141,23 +192,46 @@ export function Navigation() {
         {isMobileMenuOpen && (
           <div className="lg:hidden border-t bg-background">
             <div className="px-2 pt-2 pb-3 space-y-1">
-              {Object.entries(navigationData).map(([key, category]) => (
-                <div key={key} className="space-y-1">
-                  <div className="px-3 py-2 text-sm font-medium text-foreground border-b">
-                    {category.title}
-                  </div>
-                  {category.items.map((item) => (
+              {/* Simple menu items */}
+              {simpleMenuItems.map((item) => (
+                <Link
+                  key={item.href}
+                  to={item.href}
+                  className="block px-3 py-2 text-sm text-foreground hover:bg-muted rounded-md transition-colors"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              ))}
+              
+              {/* Skilled Migration Section */}
+              <div className="space-y-1">
+                <div className="px-3 py-2 text-sm font-medium text-foreground border-b">
+                  Skilled Migration
+                </div>
+                {navigationData.skilledMigration.countries.map((country) => (
+                  <div key={country.href} className="space-y-1">
                     <Link
-                      key={item.href}
-                      to={item.href}
-                      className="block px-6 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted rounded-md transition-colors"
+                      to={country.href}
+                      className="block px-6 py-2 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted rounded-md transition-colors"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
-                      {item.name}
+                      {country.name}
                     </Link>
-                  ))}
-                </div>
-              ))}
+                    {country.items.slice(0, 3).map((item) => (
+                      <Link
+                        key={item.href}
+                        to={item.href}
+                        className="block px-8 py-1 text-xs text-muted-foreground hover:text-foreground hover:bg-muted rounded-md transition-colors"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        {item.name}
+                      </Link>
+                    ))}
+                  </div>
+                ))}
+              </div>
+              
               <div className="pt-4 space-y-2">
                 <Link to="/contact" className="block w-full">
                   <Button variant="outline" className="w-full">Contact Us</Button>
