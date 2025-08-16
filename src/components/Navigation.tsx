@@ -86,8 +86,8 @@ export function Navigation() {
     <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <Link to="/" className="flex items-center">
+          {/* Logo - Fixed to left corner */}
+          <Link to="/" className="flex items-center justify-start flex-shrink-0">
             <img 
               src="/lovable-uploads/8e7c39f0-ed56-4618-9880-e05c2d6a5038.png" 
               alt="Gratitude Residency & Citizenship" 
