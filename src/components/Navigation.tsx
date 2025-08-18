@@ -20,13 +20,13 @@ const navigationData = {
         name: "Australia",
         href: "/australia",
         items: [
-          { name: "Skilled Migration 189", href: "/australia/skilled-189" },
-          { name: "Skilled Migration 190", href: "/australia/skilled-190" },
-          { name: "Skilled Migration 491", href: "/australia/skilled-491" },
-          { name: "Partner Visa", href: "/australia/partner-visa" },
-          { name: "Visit Visa", href: "/australia/visit-visa" },
-          { name: "Business Visa", href: "/australia/business-visa" },
-          { name: "Study Visa", href: "/australia/study-visa" },
+          { name: "Skilled Migration 189", href: "/australia" },
+          { name: "Skilled Migration 190", href: "/australia" },
+          { name: "Skilled Migration 491", href: "/australia" },
+          { name: "Partner Visa", href: "/australia" },
+          { name: "Visit Visa", href: "/australia" },
+          { name: "Business Visa", href: "/australia" },
+          { name: "Study Visa", href: "/australia" },
         ]
       },
       {

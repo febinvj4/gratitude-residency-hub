@@ -110,7 +110,23 @@ export function Footer() {
           </div>
 
           {/* Footer Sections */}
-          {footerSections.map((section, index) => {})}
+          {footerSections.map((section, index) => (
+            <div key={index} className="space-y-4">
+              <h3 className="text-lg font-semibold">{section.title}</h3>
+              <ul className="space-y-2">
+                {section.links.map((link, linkIndex) => (
+                  <li key={linkIndex}>
+                    <Link
+                      to={link.href}
+                      className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition-colors"
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
 
         <div className="border-t border-primary-foreground/20 mt-12 pt-8">
