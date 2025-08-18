@@ -20,13 +20,13 @@ const navigationData = {
         name: "Australia",
         href: "/australia",
         items: [
-          { name: "Skilled Migration 189", href: "/australia" },
-          { name: "Skilled Migration 190", href: "/australia" },
-          { name: "Skilled Migration 491", href: "/australia" },
-          { name: "Partner Visa", href: "/australia" },
-          { name: "Visit Visa", href: "/australia" },
-          { name: "Business Visa", href: "/australia" },
-          { name: "Study Visa", href: "/australia" },
+          { name: "Skilled Migration 189", href: "/canada" },
+          { name: "Skilled Migration 190", href: "/canada" },
+          { name: "Skilled Migration 491", href: "/canada" },
+          { name: "Partner Visa", href: "/canada" },
+          { name: "Visit Visa", href: "/canada" },
+          { name: "Business Visa", href: "/canada" },
+          { name: "Study Visa", href: "/canada" },
         ]
       },
       {
@@ -36,7 +36,6 @@ const navigationData = {
           { name: "Express Entry", href: "/canada/express-entry" },
           { name: "PNP", href: "/canada/pnp" },
           { name: "Atlantic Immigration", href: "/canada/atlantic" },
-          { name: "RNIP", href: "/canada/rnip" },
           { name: "LMIA", href: "/canada/lmia" },
           { name: "Visitor Visa", href: "/canada/visitor-visa" },
           { name: "Study Visa", href: "/canada/study-visa" },
