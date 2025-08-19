@@ -327,26 +327,46 @@ export default function CanadaPage() {
             </ul>
           </div>
 
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="bg-primary py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-primary-foreground mb-4">
-            Start Your Canada Immigration Journey
-          </h2>
-          <p className="text-lg text-primary-foreground/90 mb-8">
-            Book a consultation with our RCIC-licensed consultants and explore your best options for Canada.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="secondary" asChild>
-              <Link to="/consultation">Free Assessment</Link>
-            </Button>
-            <Button size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary" asChild>
-              <Link to="/contact">Contact Expert</Link>
-            </Button>
-          </div>
+          {/* Call to Action */}
+          <Card className="p-8 bg-gradient-to-br from-primary/10 to-secondary/10 border-primary/20">
+            <CardContent className="text-center space-y-6">
+              <h2 className="text-3xl font-bold text-foreground">Start Your Canada Immigration Journey</h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Book a consultation with our RCIC-licensed consultants and explore your best options for Canada.
+              </p>
+              <div className="space-y-4">
+                <p className="text-muted-foreground">
+                  <strong>At Gratitude Residency and Citizenship, we provide:</strong>
+                </p>
+                <ul className="text-muted-foreground text-sm space-y-1 max-w-md mx-auto text-left">
+                  <li className="flex items-start">
+                    <span className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    CRS points calculation & Express Entry profile setup
+                  </li>
+                  <li className="flex items-start">
+                    <span className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    Skills and occupation matching for PNP
+                  </li>
+                  <li className="flex items-start">
+                    <span className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    Employer connections under AIP
+                  </li>
+                  <li className="flex items-start">
+                    <span className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    Step-by-step guidance until PR approval
+                  </li>
+                </ul>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button size="lg" asChild>
+                  <Link to="/consultation">Free Assessment</Link>
+                </Button>
+                <Button variant="outline" size="lg" asChild>
+                  <Link to="/contact">Contact Expert</Link>
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </section>
 

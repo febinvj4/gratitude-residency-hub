@@ -466,27 +466,25 @@ export default function AustraliaPage() {
               </div>
             </CardContent>
           </Card>
-          
-        </div>
-      </section>
 
-      {/* CTA Section */}
-      <section className="bg-primary py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-primary-foreground mb-4">
-            Ready to Start Your Australia Journey?
-          </h2>
-          <p className="text-lg text-primary-foreground/90 mb-8">
-            Get a free assessment and discover which Australia immigration program is right for you.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="secondary" asChild>
-              <Link to="/consultation">Book Now</Link>
-            </Button>
-            <Button size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary" asChild>
-              <Link to="/contact">Contact Us</Link>
-            </Button>
-          </div>
+          {/* Call to Action */}
+          <Card className="p-8 bg-gradient-to-br from-primary/10 to-secondary/10 border-primary/20">
+            <CardContent className="text-center space-y-6">
+              <h2 className="text-3xl font-bold text-foreground">Ready to Start Your Australia Journey?</h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Get a free assessment and discover which Australia immigration program is right for you.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button size="lg" asChild>
+                  <Link to="/consultation">Book Free Assessment</Link>
+                </Button>
+                <Button variant="outline" size="lg" asChild>
+                  <Link to="/contact">Contact Us</Link>
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
+          
         </div>
       </section>
 
