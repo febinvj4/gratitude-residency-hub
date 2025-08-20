@@ -51,7 +51,6 @@ const navigationData = {
 
 const simpleMenuItems = [
   { name: "Home", href: "/" },
-  { name: "Testimonials", href: "/testimonials" },
   { name: "About Us", href: "/about" }
 ];
 
@@ -156,9 +155,6 @@ export function Navigation() {
 
           {/* CTA Button */}
           <div className="hidden lg:flex items-center space-x-4">
-            <Button variant="outline" asChild>
-              <Link to="/contact">Contact Us</Link>
-            </Button>
             <Button asChild>
               <Link to="/consultation">Book Now</Link>
             </Button>
@@ -226,9 +222,6 @@ export function Navigation() {
               </div>
               
               <div className="pt-4 space-y-2">
-                <Link to="/contact" className="block w-full">
-                  <Button variant="outline" className="w-full">Contact Us</Button>
-                </Link>
                 <Link to="/consultation" className="block w-full">
                   <Button className="w-full">Book Now</Button>
                 </Link>
