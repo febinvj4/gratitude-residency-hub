@@ -8,6 +8,10 @@ import AustraliaPage from "./pages/australia/AustraliaPage";
 import CanadaPage from "./pages/canada/CanadaPage";
 import NewZealandPage from "./pages/newzealand/NewZealandPage";
 import EuropePage from "./pages/europe/EuropePage";
+import AboutPage from "./pages/about/AboutPage";
+import BusinessMigrationPage from "./pages/business-migration/BusinessMigrationPage";
+import CitizenshipByInvestmentPage from "./pages/citizenship-by-investment/CitizenshipByInvestmentPage";
+import ResidencyByInvestmentPage from "./pages/residency-by-investment/ResidencyByInvestmentPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +28,10 @@ const App = () => (
           <Route path="/canada" element={<CanadaPage />} />
           <Route path="/newzealand" element={<NewZealandPage />} />
           <Route path="/europe" element={<EuropePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/business-migration" element={<BusinessMigrationPage />} />
+          <Route path="/citizenship-by-investment" element={<CitizenshipByInvestmentPage />} />
+          <Route path="/residency-by-investment" element={<ResidencyByInvestmentPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

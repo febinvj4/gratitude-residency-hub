@@ -33,12 +33,24 @@ const navigationData = {
         href: "/europe"
       }
     ]
+  },
+  businessMigration: {
+    title: "Business Migration",
+    programs: [
+      {
+        name: "Citizenship by Investment",
+        href: "/citizenship-by-investment"
+      },
+      {
+        name: "Residency by Investment", 
+        href: "/residency-by-investment"
+      }
+    ]
   }
 };
 
 const simpleMenuItems = [
   { name: "Home", href: "/" },
-  { name: "Business Migration", href: "/business-migration" },
   { name: "Testimonials", href: "/testimonials" },
   { name: "About Us", href: "/about" }
 ];
@@ -94,6 +106,29 @@ export function Navigation() {
                           )}
                         >
                           <div className="text-sm font-medium">{country.name}</div>
+                        </Link>
+                      </NavigationMenuLink>
+                    ))}
+                  </div>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+
+              {/* Business Migration Dropdown */}
+              <NavigationMenuItem>
+                <NavigationMenuTrigger className="bg-transparent hover:bg-muted transition-colors">
+                  Business Migration
+                </NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <div className="grid w-[300px] gap-3 p-4">
+                    {navigationData.businessMigration.programs.map((program) => (
+                      <NavigationMenuLink key={program.href} asChild>
+                        <Link
+                          to={program.href}
+                          className={cn(
+                            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                          )}
+                        >
+                          <div className="text-sm font-medium">{program.name}</div>
                         </Link>
                       </NavigationMenuLink>
                     ))}
@@ -169,6 +204,23 @@ export function Navigation() {
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {country.name}
+                  </Link>
+                ))}
+              </div>
+              
+              {/* Business Migration Section */}
+              <div className="space-y-1">
+                <div className="px-3 py-2 text-sm font-medium text-foreground border-b">
+                  Business Migration
+                </div>
+                {navigationData.businessMigration.programs.map((program) => (
+                  <Link
+                    key={program.href}
+                    to={program.href}
+                    className="block px-6 py-2 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted rounded-md transition-colors"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {program.name}
                   </Link>
                 ))}
               </div>
