@@ -2,16 +2,10 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-immigration.jpg";
-
 export function HeroSection() {
-  return (
-    <section className="relative min-h-screen flex items-center bg-gradient-to-br from-background via-background to-secondary/30">
+  return <section className="relative min-h-screen flex items-center bg-gradient-to-br from-background via-background to-secondary/30">
       <div className="absolute inset-0 overflow-hidden">
-        <img 
-          src={heroImage}
-          alt="Immigration and citizenship services"
-          className="w-full h-full object-cover opacity-10"
-        />
+        <img src={heroImage} alt="Immigration and citizenship services" className="w-full h-full object-cover opacity-10" />
       </div>
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -20,8 +14,8 @@ export function HeroSection() {
             <div className="space-y-4">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
                 Your Gateway to 
-                <span className="text-primary"> Global Residency</span> & 
-                <span className="text-accent"> Citizenship</span>
+                <span className="text-[#0e0e7e]"> Global Residency</span> & 
+                <span className="text-[#14147d]"> Citizenship</span>
               </h1>
               <p className="text-lg text-muted-foreground max-w-2xl">
                 With over 8 years of expertise and 4000+ successful cases, we guide you through 
@@ -99,6 +93,5 @@ export function HeroSection() {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 }
