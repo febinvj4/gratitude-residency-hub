@@ -12,6 +12,7 @@ import AboutPage from "./pages/about/AboutPage";
 import BusinessMigrationPage from "./pages/business-migration/BusinessMigrationPage";
 import CitizenshipByInvestmentPage from "./pages/citizenship-by-investment/CitizenshipByInvestmentPage";
 import ResidencyByInvestmentPage from "./pages/residency-by-investment/ResidencyByInvestmentPage";
+import { ContactPage } from "./pages/contact/ContactPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -32,6 +33,7 @@ const App = () => (
           <Route path="/business-migration" element={<BusinessMigrationPage />} />
           <Route path="/citizenship-by-investment" element={<CitizenshipByInvestmentPage />} />
           <Route path="/residency-by-investment" element={<ResidencyByInvestmentPage />} />
+          <Route path="/contact-us" element={<ContactPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

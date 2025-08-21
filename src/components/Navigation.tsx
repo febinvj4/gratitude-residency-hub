@@ -156,7 +156,7 @@ export function Navigation() {
           {/* CTA Button */}
           <div className="hidden lg:flex items-center space-x-4">
             <Button asChild>
-              <Link to="/consultation">Book Now</Link>
+              <Link to="/contact-us">Contact Us</Link>
             </Button>
           </div>
 
@@ -222,8 +222,8 @@ export function Navigation() {
               </div>
               
               <div className="pt-4 space-y-2">
-                <Link to="/consultation" className="block w-full">
-                  <Button className="w-full">Book Now</Button>
+                <Link to="/contact-us" className="block w-full">
+                  <Button className="w-full">Contact Us</Button>
                 </Link>
               </div>
             </div>
