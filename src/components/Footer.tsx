@@ -40,7 +40,7 @@ const footerSections = [{
   title: "Company",
   links: [{
     name: "About Us",
-    href: "/about"
+    href: "/about-us"
   }, {
     name: "Our Team",
     href: "/team"
