@@ -44,13 +44,13 @@ export function HeroSection() {
 
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" className="bg-primary hover:bg-primary-dark text-primary-foreground" asChild>
-                <Link to="/consultation">
+                <Link to="/contact-us">
                   Start Your Journey
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
               <Button variant="outline" size="lg" asChild>
-                <Link to="/about">Learn About Us</Link>
+                <Link to="/about-us">Learn About Us</Link>
               </Button>
             </div>
           </div>

@@ -29,7 +29,7 @@ const App = () => (
           <Route path="/canada" element={<CanadaPage />} />
           <Route path="/newzealand" element={<NewZealandPage />} />
           <Route path="/europe" element={<EuropePage />} />
-          <Route path="/about" element={<AboutPage />} />
+          <Route path="/about-us" element={<AboutPage />} />
           <Route path="/business-migration" element={<BusinessMigrationPage />} />
           <Route path="/citizenship-by-investment" element={<CitizenshipByInvestmentPage />} />
           <Route path="/residency-by-investment" element={<ResidencyByInvestmentPage />} />

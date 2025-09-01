@@ -21,7 +21,7 @@ const services = [{
   title: "New Zealand",
   description: "Skilled Migrant Category, Work Visa, Student & Visitor Visas",
   features: ["Skills shortage list", "Work to residence", "Quality of life"],
-  href: "/new-zealand",
+  href: "/newzealand",
   color: "text-blue-600"
 }, {
   icon: Building,
@@ -31,12 +31,12 @@ const services = [{
   href: "/europe",
   color: "text-purple-600"
 }, {
-  icon: FileText,
-  title: "Second Passport",
-  description: "Investment Programs, Citizenship by Descent, Naturalization",
-  features: ["Dual citizenship", "Investment routes", "Heritage programs"],
-  href: "/second-passport",
-  color: "text-amber-600"
+  icon: Briefcase,
+  title: "Business Migration",
+  description: "Investor Visas, Entrepreneur Programs, Business Innovation Visas",
+  features: ["Investment pathways", "Business ownership", "Permanent residence"],
+  href: "/business-migration",
+  color: "text-orange-600"
 }];
 export function ServicesSection() {
   return <section className="py-20 bg-secondary/20">
