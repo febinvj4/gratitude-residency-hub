@@ -143,9 +143,6 @@ export default function ResidencyByInvestmentPage() {
             <Button size="lg" variant="secondary" asChild>
               <Link to="/consultation">Book Free Assessment</Link>
             </Button>
-            <Button size="lg" variant="outline" className="bg-white/10 border-white/20 text-white hover:bg-white/20" asChild>
-              <Link to="/contact">Download Program Guide</Link>
-            </Button>
           </div>
         </div>
       </section>
