@@ -96,7 +96,7 @@ export default function CitizenshipByInvestmentPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" variant="secondary" asChild>
-              <Link to="/consultation">Book Free Assessment</Link>
+              <Link to="/contact-us">Book Free Assessment</Link>
             </Button>
             <Button size="lg" variant="outline" className="bg-white/10 border-white/20 text-white hover:bg-white/20" asChild>
               <Link to="/contact">Download Program Guide</Link>
