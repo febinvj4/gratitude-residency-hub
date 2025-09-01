@@ -76,12 +76,9 @@ export default function CitizenshipByInvestmentPage() {
             Fast-track to second citizenship through government-approved investment programs. 
             Secure your family's future with enhanced global mobility and tax optimization opportunities.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex justify-center">
             <Button size="lg" variant="secondary" asChild>
               <Link to="/contact-us">Book Free Assessment</Link>
-            </Button>
-            <Button size="lg" variant="outline" className="bg-white/10 border-white/20 text-white hover:bg-white/20" asChild>
-              <Link to="/contact">Download Program Guide</Link>
             </Button>
           </div>
         </div>
