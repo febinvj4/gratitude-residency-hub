@@ -51,7 +51,7 @@ const navigationData = {
 
 const simpleMenuItems = [
   { name: "Home", href: "/" },
-  { name: "About Us", href: "/about" }
+  { name: "About Us", href: "/about-us" }
 ];
 
 export function Navigation() {
