@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Video } from "lucide-react";
 const footerSections = [{
   title: "Services",
   links: [{
@@ -68,9 +68,9 @@ const socialLinks = [{
   href: "#",
   label: "LinkedIn"
 }, {
-  icon: Instagram,
-  href: "#",
-  label: "Instagram"
+  icon: Video,
+  href: "#", // Please provide the TikTok link
+  label: "TikTok"
 }];
 export function Footer() {
   return <footer className="bg-primary text-primary-foreground">
