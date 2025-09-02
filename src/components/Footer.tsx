@@ -1,57 +1,5 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
-const footerSections = [{
-  title: "Services",
-  links: [{
-    name: "Australia Immigration",
-    href: "/australia"
-  }, {
-    name: "Canada Immigration",
-    href: "/canada"
-  }, {
-    name: "New Zealand",
-    href: "/new-zealand"
-  }, {
-    name: "Europe Programs",
-    href: "/europe"
-  }, {
-    name: "Second Passport",
-    href: "/second-passport"
-  }]
-}, {
-  title: "Resources",
-  links: [{
-    name: "Immigration Calculator",
-    href: "/calculator"
-  }, {
-    name: "Document Checklist",
-    href: "/documents"
-  }, {
-    name: "Success Stories",
-    href: "/success-stories"
-  }, {
-    name: "Blog",
-    href: "/blog"
-  }, {
-    name: "FAQ",
-    href: "/faq"
-  }]
-}, {
-  title: "Company",
-  links: [{
-    name: "About Us",
-    href: "/about-us"
-  }, {
-    name: "Our Team",
-    href: "/team"
-  }, {
-    name: "Career",
-    href: "/career"
-  }, {
-    name: "Contact",
-    href: "/contact"
-  }]
-}];
 const socialLinks = [{
   icon: Facebook,
   href: "#",
@@ -72,9 +20,9 @@ const socialLinks = [{
 export function Footer() {
   return <footer className="bg-primary text-primary-foreground">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid lg:grid-cols-4 gap-8">
+        <div className="flex justify-center">
           {/* Company Info */}
-          <div className="lg:col-span-1 space-y-6">
+          <div className="max-w-md space-y-6 text-center">
             <div>
               
               <h3 className="text-xl font-semibold mb-2 my-0 py-0">Gratitude Residency & Citizenship</h3>
@@ -99,31 +47,12 @@ export function Footer() {
               </div>
             </div>
 
-            <div className="flex space-x-4">
+            <div className="flex justify-center space-x-4">
               {socialLinks.map((social, index) => <a key={index} href={social.href} className="p-2 bg-primary-foreground/10 rounded-lg hover:bg-primary-foreground/20 transition-colors" aria-label={social.label}>
                   <social.icon className="h-5 w-5" />
                 </a>)}
             </div>
           </div>
-
-          {/* Footer Sections */}
-          {footerSections.map((section, index) => (
-            <div key={index} className="space-y-4">
-              <h3 className="text-lg font-semibold">{section.title}</h3>
-              <ul className="space-y-2">
-                {section.links.map((link, linkIndex) => (
-                  <li key={linkIndex}>
-                    <Link
-                      to={link.href}
-                      className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition-colors"
-                    >
-                      {link.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
         </div>
 
         <div className="border-t border-primary-foreground/20 mt-12 pt-8">
