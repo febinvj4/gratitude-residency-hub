@@ -69,7 +69,7 @@ const socialLinks = [{
   label: "LinkedIn"
 }, {
   icon: Video,
-  href: "#", // Please provide the TikTok link
+  href: "https://www.tiktok.com/@gratituderesidency?_t=ZS-8zOekllOOed&_r=1",
   label: "TikTok"
 }];
 export function Footer() {
