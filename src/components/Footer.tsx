@@ -50,9 +50,6 @@ const footerSections = [{
   }, {
     name: "Contact",
     href: "/contact"
-  }, {
-    name: "Privacy Policy",
-    href: "/privacy"
   }]
 }];
 const socialLinks = [{
@@ -130,16 +127,8 @@ export function Footer() {
         </div>
 
         <div className="border-t border-primary-foreground/20 mt-12 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+          <div className="text-center">
             <p className="text-primary-foreground/60 text-sm">© 2025 Gratitude Residency and Citizenship. All rights reserved.</p>
-            <div className="flex space-x-6">
-              <Link to="/terms" className="text-primary-foreground/60 hover:text-primary-foreground text-sm transition-colors">
-                Terms of Service
-              </Link>
-              <Link to="/privacy" className="text-primary-foreground/60 hover:text-primary-foreground text-sm transition-colors">
-                Privacy Policy
-              </Link>
-            </div>
           </div>
         </div>
       </div>
