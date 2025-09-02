@@ -1,20 +1,20 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+import { Mail, Phone, MapPin, Facebook, Instagram, Youtube, Video } from "lucide-react";
 const socialLinks = [{
   icon: Facebook,
-  href: "#",
+  href: "https://www.facebook.com/share/19baAfXV52/?mibextid=wwXIfr",
   label: "Facebook"
 }, {
-  icon: Twitter,
-  href: "#",
-  label: "Twitter"
+  icon: Video,
+  href: "https://www.tiktok.com/@gratituderesidency?_t=ZS-8zOgJPyNu23&_r=1",
+  label: "TikTok"
 }, {
-  icon: Linkedin,
-  href: "#",
-  label: "LinkedIn"
+  icon: Youtube,
+  href: "https://youtube.com/@gratituderesidency?si=O0VPxYzCF-kOikYO",
+  label: "YouTube"
 }, {
   icon: Instagram,
-  href: "#",
+  href: "https://www.instagram.com/gratituderesidency?igsh=MWdmNGs5dHl2amd6aQ%3D%3D&utm_source=qr",
   label: "Instagram"
 }];
 export function Footer() {
