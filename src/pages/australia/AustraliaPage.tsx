@@ -4,10 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle, Clock, FileText, MapPin, Heart, Plane } from "lucide-react";
 import { Link } from "react-router-dom";
-
 export default function AustraliaPage() {
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       <Navigation />
       
       {/* Hero Section */}
@@ -486,6 +484,5 @@ export default function AustraliaPage() {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 }
