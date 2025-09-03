@@ -207,9 +207,6 @@ export default function EuropePage() {
                 If you'd like, I can map your/your client's profile to the best EU country and permit (Blue Card vs national permit vs Job Seeker/Opportunity Card), list the exact documents, and build a timeline to application.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" asChild>
-                  <Link to="/consultation">Get Expert Consultation</Link>
-                </Button>
                 <Button variant="outline" size="lg" asChild>
                   <Link to="/contact-us">Contact Us</Link>
                 </Button>
