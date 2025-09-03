@@ -362,7 +362,7 @@ export default function CanadaPage() {
                   <Link to="/consultation">Free Assessment</Link>
                 </Button>
                 <Button variant="outline" size="lg" asChild>
-                  <Link to="/contact">Contact Expert</Link>
+                  <Link to="/contact-us">Contact Expert</Link>
                 </Button>
               </div>
             </CardContent>
