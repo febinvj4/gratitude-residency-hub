@@ -182,9 +182,6 @@ export default function NewZealandPage() {
                 Get your free pre-assessment today. We'll confirm your best pathway, fix the evidence gaps, and manage your case from offer to grant.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" asChild>
-                  <Link to="/consultation">Book Free Consultation</Link>
-                </Button>
                 <Button variant="outline" size="lg" asChild>
                   <Link to="/contact">Contact Us</Link>
                 </Button>
