@@ -211,7 +211,7 @@ export default function EuropePage() {
                   <Link to="/consultation">Get Expert Consultation</Link>
                 </Button>
                 <Button variant="outline" size="lg" asChild>
-                  <Link to="/contact">Contact Us</Link>
+                  <Link to="/contact-us">Contact Us</Link>
                 </Button>
               </div>
             </CardContent>
