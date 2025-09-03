@@ -474,10 +474,7 @@ export default function AustraliaPage() {
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                 Get a free assessment and discover which Australia immigration program is right for you.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" asChild>
-                  <Link to="/consultation">Book Free Assessment</Link>
-                </Button>
+              <div className="flex justify-center">
                 <Button variant="outline" size="lg" asChild>
                   <Link to="/contact">Contact Us</Link>
                 </Button>
