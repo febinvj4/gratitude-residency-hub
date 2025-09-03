@@ -183,7 +183,7 @@ export default function NewZealandPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button variant="outline" size="lg" asChild>
-                  <Link to="/contact">Contact Us</Link>
+                  <Link to="/contact-us">Contact Us</Link>
                 </Button>
               </div>
             </CardContent>
