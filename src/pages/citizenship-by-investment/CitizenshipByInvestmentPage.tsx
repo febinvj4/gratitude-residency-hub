@@ -127,7 +127,7 @@ export default function CitizenshipByInvestmentPage() {
                   </div>
                   
                   <Button asChild className="w-full">
-                    <Link to="/consultation">
+                     <Link to="/contact-us">
                       Learn More
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
