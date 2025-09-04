@@ -218,9 +218,6 @@ export default function AboutPage() {
                 <Button asChild>
                   <Link to="/consultation">Book Free Consultation</Link>
                 </Button>
-                <Button variant="outline" asChild>
-                  <Link to="/contact">Contact Our Team</Link>
-                </Button>
               </div>
             </div>
 
