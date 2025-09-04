@@ -376,7 +376,7 @@ export default function ResidencyByInvestmentPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" variant="secondary" asChild>
-              <Link to="/consultation">Book Free Consultation</Link>
+              <Link to="/contact-us">Book Free Consultation</Link>
             </Button>
           </div>
         </div>
