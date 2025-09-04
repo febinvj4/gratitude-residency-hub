@@ -4,19 +4,15 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle, Globe, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
-
 export default function EuropePage() {
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       <Navigation />
       
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-background to-secondary/30 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-6 flex items-center justify-center gap-3">
-              🇪🇺 Europe Work & Migration Guide 2025
-            </h1>
+            <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-6 flex items-center justify-center gap-3">🇪🇺 Europe Work & Migration Guide </h1>
             <p className="text-xl text-muted-foreground max-w-4xl mx-auto mb-8">
               Comprehensive guide to working in Europe: EU Blue Card, Job Seeker visas, Germany's Opportunity Card, and Schengen travel requirements.
             </p>
@@ -217,6 +213,5 @@ export default function EuropePage() {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 }
