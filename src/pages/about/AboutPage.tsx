@@ -189,35 +189,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Our Team Section */}
-      <section className="py-20 bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-              Meet Our Expert Team
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Our team of licensed professionals brings extensive experience and dedication to your immigration journey
-            </p>
-          </div>
-
-          <div className="grid lg:grid-cols-3 gap-8">
-            {teamMembers.map((member, index) => (
-              <Card key={index}>
-                <CardContent className="p-8 text-center">
-                  <div className="w-24 h-24 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Users className="h-12 w-12 text-primary" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">{member.name}</h3>
-                  <p className="text-primary font-medium mb-1">{member.position}</p>
-                  <p className="text-sm text-muted-foreground mb-2">{member.credentials}</p>
-                  <p className="text-sm text-muted-foreground">{member.experience}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Why Choose Us Section */}
       <section className="py-20 bg-muted/30">
