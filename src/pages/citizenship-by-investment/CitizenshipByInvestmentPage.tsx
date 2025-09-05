@@ -126,12 +126,6 @@ export default function CitizenshipByInvestmentPage() {
                       </div>)}
                   </div>
                   
-                  <Button asChild className="w-full">
-                     <Link to="/contact-us">
-                      Learn More
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
-                  </Button>
                 </CardContent>
               </Card>)}
           </div>
