@@ -230,9 +230,6 @@ export default function BusinessMigrationPage() {
             <Button size="lg" variant="secondary" asChild>
               <Link to="/contact-us">Book Free Consultation</Link>
             </Button>
-            <Button size="lg" variant="outline" className="bg-white/10 border-white/20 text-white hover:bg-white/20" asChild>
-              <Link to="/contact">Contact Us</Link>
-            </Button>
           </div>
         </div>
       </section>
