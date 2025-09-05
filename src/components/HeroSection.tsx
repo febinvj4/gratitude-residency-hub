@@ -85,8 +85,8 @@ export function HeroSection() {
                     <option>Business Visa</option>
                   </select>
                 </div>
-                <Button className="w-full" size="lg">
-                  Get Free Assessment
+                <Button className="w-full" size="lg" asChild>
+                  <Link to="/contact-us">Get Free Assessment</Link>
                 </Button>
               </div>
             </div>
