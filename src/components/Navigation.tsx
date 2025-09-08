@@ -46,6 +46,35 @@ const navigationData = {
         href: "/residency-by-investment"
       }
     ]
+  },
+  studyAbroad: {
+    title: "Study Abroad",
+    countries: [
+      {
+        name: "Austria",
+        href: "/study-abroad/austria"
+      },
+      {
+        name: "Finland",
+        href: "/study-abroad/finland"
+      },
+      {
+        name: "Hungary",
+        href: "/study-abroad/hungary"
+      },
+      {
+        name: "Sweden",
+        href: "/study-abroad/sweden"
+      },
+      {
+        name: "Netherlands",
+        href: "/study-abroad/netherlands"
+      },
+      {
+        name: "Spain",
+        href: "/study-abroad/spain"
+      }
+    ]
   }
 };
 
@@ -135,6 +164,29 @@ export function Navigation() {
                 </NavigationMenuContent>
               </NavigationMenuItem>
 
+              {/* Study Abroad Dropdown */}
+              <NavigationMenuItem>
+                <NavigationMenuTrigger className="bg-transparent hover:bg-muted transition-colors">
+                  Study Abroad
+                </NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <div className="grid w-[400px] gap-3 p-4 md:grid-cols-2">
+                    {navigationData.studyAbroad.countries.map((country) => (
+                      <NavigationMenuLink key={country.href} asChild>
+                        <Link
+                          to={country.href}
+                          className={cn(
+                            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                          )}
+                        >
+                          <div className="text-sm font-medium">{country.name}</div>
+                        </Link>
+                      </NavigationMenuLink>
+                    ))}
+                  </div>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+
               {/* Other simple menu items */}
               {simpleMenuItems.slice(1).map((item) => (
                 <NavigationMenuItem key={item.href}>
@@ -217,6 +269,23 @@ export function Navigation() {
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {program.name}
+                  </Link>
+                ))}
+              </div>
+              
+              {/* Study Abroad Section */}
+              <div className="space-y-1">
+                <div className="px-3 py-2 text-sm font-medium text-foreground border-b">
+                  Study Abroad
+                </div>
+                {navigationData.studyAbroad.countries.map((country) => (
+                  <Link
+                    key={country.href}
+                    to={country.href}
+                    className="block px-6 py-2 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted rounded-md transition-colors"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {country.name}
                   </Link>
                 ))}
               </div>

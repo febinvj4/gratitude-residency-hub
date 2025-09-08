@@ -13,6 +13,12 @@ import BusinessMigrationPage from "./pages/business-migration/BusinessMigrationP
 import CitizenshipByInvestmentPage from "./pages/citizenship-by-investment/CitizenshipByInvestmentPage";
 import ResidencyByInvestmentPage from "./pages/residency-by-investment/ResidencyByInvestmentPage";
 import { ContactPage } from "./pages/contact/ContactPage";
+import AustriaPage from "./pages/study-abroad/AustriaPage";
+import FinlandPage from "./pages/study-abroad/FinlandPage";
+import HungaryPage from "./pages/study-abroad/HungaryPage";
+import SwedenPage from "./pages/study-abroad/SwedenPage";
+import NetherlandsPage from "./pages/study-abroad/NetherlandsPage";
+import SpainPage from "./pages/study-abroad/SpainPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -34,6 +40,12 @@ const App = () => (
           <Route path="/citizenship-by-investment" element={<CitizenshipByInvestmentPage />} />
           <Route path="/residency-by-investment" element={<ResidencyByInvestmentPage />} />
           <Route path="/contact-us" element={<ContactPage />} />
+          <Route path="/study-abroad/austria" element={<AustriaPage />} />
+          <Route path="/study-abroad/finland" element={<FinlandPage />} />
+          <Route path="/study-abroad/hungary" element={<HungaryPage />} />
+          <Route path="/study-abroad/sweden" element={<SwedenPage />} />
+          <Route path="/study-abroad/netherlands" element={<NetherlandsPage />} />
+          <Route path="/study-abroad/spain" element={<SpainPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

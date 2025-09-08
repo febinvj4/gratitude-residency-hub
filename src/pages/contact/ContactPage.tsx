@@ -233,6 +233,7 @@ const migrationOptions = [
   "Canada - Express Entry",
   "Europe - Work Permits",
   "Europe - Job Seeker Visa",
+  "Study Abroad",
   "Visit Visa Consultation"
 ];
 
