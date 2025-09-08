@@ -55,42 +55,6 @@ export function HeroSection() {
             </div>
           </div>
 
-          <div className="relative">
-            <div className="bg-card rounded-2xl p-8 shadow-large border">
-              <h3 className="text-xl font-semibold mb-6 text-foreground">Quick Assessment</h3>
-              <div className="space-y-4">
-                <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">
-                    Preferred Destination
-                  </label>
-                  <select className="w-full p-3 border rounded-lg bg-background text-foreground">
-                    <option>Select a country...</option>
-                    <option>Australia</option>
-                    <option>Canada</option>
-                    <option>New Zealand</option>
-                    <option>Germany</option>
-                    <option>Portugal</option>
-                  </select>
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">
-                    Immigration Category
-                  </label>
-                  <select className="w-full p-3 border rounded-lg bg-background text-foreground">
-                    <option>Select category...</option>
-                    <option>Skilled Migration</option>
-                    <option>Work Visa</option>
-                    <option>Study Visa</option>
-                    <option>Family Visa</option>
-                    <option>Business Visa</option>
-                  </select>
-                </div>
-                <Button className="w-full" size="lg" asChild>
-                  <Link to="/contact-us">Get Free Assessment</Link>
-                </Button>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>;
