@@ -37,6 +37,13 @@ const services = [{
   features: ["Investment pathways", "Business ownership", "Permanent residence"],
   href: "/business-migration",
   color: "text-orange-600"
+}, {
+  icon: GraduationCap,
+  title: "Study Abroad",
+  description: "Study opportunities in Austria, Finland, Hungary, Sweden, Netherlands & Spain",
+  features: ["Quality education", "PR pathways", "Work opportunities"],
+  href: "/study-abroad",
+  color: "text-indigo-600"
 }];
 export function ServicesSection() {
   return <section className="py-20 bg-secondary/20">
