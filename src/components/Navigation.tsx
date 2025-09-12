@@ -166,8 +166,8 @@ export function Navigation() {
 
               {/* Study Abroad Dropdown */}
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="bg-transparent hover:bg-muted transition-colors">
-                  Study Abroad
+                <NavigationMenuTrigger className="bg-transparent hover:bg-muted transition-colors" asChild>
+                  <Link to="/study-abroad">Study Abroad</Link>
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <div className="grid w-[400px] gap-3 p-4 md:grid-cols-2">
@@ -275,9 +275,13 @@ export function Navigation() {
               
               {/* Study Abroad Section */}
               <div className="space-y-1">
-                <div className="px-3 py-2 text-sm font-medium text-foreground border-b">
+                <Link
+                  to="/study-abroad"
+                  className="block px-3 py-2 text-sm font-medium text-foreground border-b hover:bg-muted rounded-md transition-colors"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
                   Study Abroad
-                </div>
+                </Link>
                 {navigationData.studyAbroad.countries.map((country) => (
                   <Link
                     key={country.href}

@@ -19,6 +19,7 @@ import HungaryPage from "./pages/study-abroad/HungaryPage";
 import SwedenPage from "./pages/study-abroad/SwedenPage";
 import NetherlandsPage from "./pages/study-abroad/NetherlandsPage";
 import SpainPage from "./pages/study-abroad/SpainPage";
+import StudyAbroadPage from "./pages/study-abroad/StudyAbroadPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -40,6 +41,7 @@ const App = () => (
           <Route path="/citizenship-by-investment" element={<CitizenshipByInvestmentPage />} />
           <Route path="/residency-by-investment" element={<ResidencyByInvestmentPage />} />
           <Route path="/contact-us" element={<ContactPage />} />
+          <Route path="/study-abroad" element={<StudyAbroadPage />} />
           <Route path="/study-abroad/austria" element={<AustriaPage />} />
           <Route path="/study-abroad/finland" element={<FinlandPage />} />
           <Route path="/study-abroad/hungary" element={<HungaryPage />} />
