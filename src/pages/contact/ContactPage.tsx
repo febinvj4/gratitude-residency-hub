@@ -250,14 +250,43 @@ export function ContactPage() {
     migrateTo: ""
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  const { name, email, countryCode, phone, qualification, profession, experience, migrateTo } = formData;
+  const { error } = await supabase.from("contact_requests").insert([
+    {
+      full_name: name,
+      email_address: email,
+      phone_number: `${countryCode}${phone}`,
+      highest_qualification: qualification,
+      current_profession: profession,
+      professional_experience: experience,
+      migrate_to: migrateTo,
+    }
+  ]);
+  if (error) {
+    toast({
+      title: "Error submitting form",
+      description: error.message,
+      variant: "destructive",
+    });
+  } else {
     toast({
       title: "Form Submitted Successfully",
       description: "Thank you for your inquiry. We'll get back to you within 24 hours.",
     });
-    console.log("Form submitted:", formData);
-  };
+    setFormData({
+      name: "",
+      email: "",
+      countryCode: "+1",
+      phone: "",
+      qualification: "",
+      profession: "",
+      experience: "",
+      migrateTo: ""
+    });
+  }
+};
 
   const handleInputChange = (field: string, value: string) => {
     setFormData(prev => ({ ...prev, [field]: value }));
