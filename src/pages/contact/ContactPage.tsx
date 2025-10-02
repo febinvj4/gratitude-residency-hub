@@ -229,7 +229,6 @@ const qualifications = [
 ];
 
 const migrationOptions = [
-  "Australia - Skilled Migration",
   "Canada - Express Entry",
   "Europe - Work Permits",
   "Europe - Job Seeker Visa",
