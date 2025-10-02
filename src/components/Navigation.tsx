@@ -162,8 +162,8 @@ export function Navigation() {
 
               {/* Study Abroad Dropdown */}
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="bg-transparent hover:bg-muted transition-colors" asChild>
-                  <Link to="/study-abroad">Study Abroad</Link>
+                <NavigationMenuTrigger className="bg-transparent hover:bg-muted transition-colors">
+                  Study Abroad
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <div className="grid w-[400px] gap-3 p-4 md:grid-cols-2">
