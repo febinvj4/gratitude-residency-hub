@@ -17,10 +17,6 @@ const navigationData = {
     title: "Skilled Migration",
     countries: [
       {
-        name: "Australia",
-        href: "/australia"
-      },
-      {
         name: "Canada",
         href: "/canada"
       },

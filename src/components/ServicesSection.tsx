@@ -3,13 +3,6 @@ import { Button } from "@/components/ui/button";
 import { Globe, MapPin, Plane, Building, GraduationCap, Heart, Briefcase, FileText } from "lucide-react";
 import { Link } from "react-router-dom";
 const services = [{
-  icon: Globe,
-  title: "Australia",
-  description: "Skilled Migration (189/190/491), Partner Visa, Study & Business Visas",
-  features: ["Points-based system", "State nomination", "Regional opportunities"],
-  href: "/australia",
-  color: "text-green-600"
-}, {
   icon: MapPin,
   title: "Canada",
   description: "Express Entry, PNP, Atlantic Immigration, LMIA, Study & Visitor Visas",

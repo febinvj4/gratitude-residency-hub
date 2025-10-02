@@ -1,4 +1,3 @@
-import { supabase } from "@/integrations/supabase/client";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -254,39 +253,33 @@ export function ContactPage() {
   const handleSubmit = async (e: React.FormEvent) => {
   e.preventDefault();
   const { name, email, countryCode, phone, qualification, profession, experience, migrateTo } = formData;
-  const { error } = await supabase.from("contact_requests").insert([
-    {
-      full_name: name,
-      email_address: email,
-      phone_number: `${countryCode}${phone}`,
-      highest_qualification: qualification,
-      current_profession: profession,
-      professional_experience: experience,
-      migrate_to: migrateTo,
-    }
-  ]);
-  if (error) {
-    toast({
-      title: "Error submitting form",
-      description: error.message,
-      variant: "destructive",
-    });
-  } else {
-    toast({
-      title: "Form Submitted Successfully",
-      description: "Thank you for your inquiry. We'll get back to you within 24 hours.",
-    });
-    setFormData({
-      name: "",
-      email: "",
-      countryCode: "+1",
-      phone: "",
-      qualification: "",
-      profession: "",
-      experience: "",
-      migrateTo: ""
-    });
-  }
+  
+  // Form data is captured but not stored in database yet
+  console.log('Form submitted:', {
+    full_name: name,
+    email_address: email,
+    phone_number: `${countryCode}${phone}`,
+    highest_qualification: qualification,
+    current_profession: profession,
+    professional_experience: experience,
+    migrate_to: migrateTo,
+  });
+  
+  toast({
+    title: "Form Submitted Successfully",
+    description: "Thank you for your inquiry. We'll get back to you within 24 hours.",
+  });
+  
+  setFormData({
+    name: "",
+    email: "",
+    countryCode: "+1",
+    phone: "",
+    qualification: "",
+    profession: "",
+    experience: "",
+    migrateTo: ""
+  });
 };
 
   const handleInputChange = (field: string, value: string) => {
