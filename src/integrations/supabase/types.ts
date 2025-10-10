@@ -14,7 +14,42 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      contact_requests: {
+        Row: {
+          created_at: string | null
+          current_profession: string | null
+          email_address: string
+          full_name: string
+          highest_qualification: string | null
+          id: number
+          migrate_to: string | null
+          phone_number: string | null
+          professional_experience: string | null
+        }
+        Insert: {
+          created_at?: string | null
+          current_profession?: string | null
+          email_address: string
+          full_name: string
+          highest_qualification?: string | null
+          id?: never
+          migrate_to?: string | null
+          phone_number?: string | null
+          professional_experience?: string | null
+        }
+        Update: {
+          created_at?: string | null
+          current_profession?: string | null
+          email_address?: string
+          full_name?: string
+          highest_qualification?: string | null
+          id?: never
+          migrate_to?: string | null
+          phone_number?: string | null
+          professional_experience?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
