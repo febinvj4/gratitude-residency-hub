@@ -8,6 +8,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 const countries = [
   { code: "+1", name: "United States", flag: "🇺🇸" },
@@ -250,36 +251,48 @@ export function ContactPage() {
   });
 
   const handleSubmit = async (e: React.FormEvent) => {
-  e.preventDefault();
-  const { name, email, countryCode, phone, qualification, profession, experience, migrateTo } = formData;
-  
-  // Form data is captured but not stored in database yet
-  console.log('Form submitted:', {
-    full_name: name,
-    email_address: email,
-    phone_number: `${countryCode}${phone}`,
-    highest_qualification: qualification,
-    current_profession: profession,
-    professional_experience: experience,
-    migrate_to: migrateTo,
-  });
-  
-  toast({
-    title: "Form Submitted Successfully",
-    description: "Thank you for your inquiry. We'll get back to you within 24 hours.",
-  });
-  
-  setFormData({
-    name: "",
-    email: "",
-    countryCode: "+1",
-    phone: "",
-    qualification: "",
-    profession: "",
-    experience: "",
-    migrateTo: ""
-  });
-};
+    e.preventDefault();
+    const { name, email, countryCode, phone, qualification, profession, experience, migrateTo } = formData;
+    
+    try {
+      const { error } = await (supabase as any)
+        .from('contact_requests')
+        .insert({
+          full_name: name,
+          email_address: email,
+          phone_number: `${countryCode}${phone}`,
+          highest_qualification: qualification,
+          current_profession: profession,
+          professional_experience: experience,
+          migrate_to: migrateTo,
+        });
+
+      if (error) throw error;
+
+      toast({
+        title: "Form Submitted Successfully",
+        description: "Thank you for your inquiry. We'll get back to you within 24 hours.",
+      });
+      
+      setFormData({
+        name: "",
+        email: "",
+        countryCode: "+1",
+        phone: "",
+        qualification: "",
+        profession: "",
+        experience: "",
+        migrateTo: ""
+      });
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      toast({
+        title: "Submission Failed",
+        description: "There was an error submitting your form. Please try again.",
+        variant: "destructive",
+      });
+    }
+  };
 
   const handleInputChange = (field: string, value: string) => {
     setFormData(prev => ({ ...prev, [field]: value }));
