@@ -9,6 +9,7 @@ import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
+import type { TablesInsert } from "@/integrations/supabase/types";
 
 const countries = [
   { code: "+1", name: "United States", flag: "🇺🇸" },
@@ -255,17 +256,19 @@ export function ContactPage() {
     const { name, email, countryCode, phone, qualification, profession, experience, migrateTo } = formData;
     
     try {
-      const { error } = await (supabase as any)
+      const payload: TablesInsert<'contact_requests'> = {
+        full_name: name,
+        email_address: email,
+        phone_number: `${countryCode}${phone}`,
+        highest_qualification: qualification || null,
+        current_profession: profession || null,
+        professional_experience: experience || null,
+        migrate_to: migrateTo || null,
+      };
+
+      const { error } = await supabase
         .from('contact_requests')
-        .insert({
-          full_name: name,
-          email_address: email,
-          phone_number: `${countryCode}${phone}`,
-          highest_qualification: qualification,
-          current_profession: profession,
-          professional_experience: experience,
-          migrate_to: migrateTo,
-        });
+        .insert(payload);
 
       if (error) throw error;
 
@@ -284,11 +287,11 @@ export function ContactPage() {
         experience: "",
         migrateTo: ""
       });
-    } catch (error) {
-      console.error('Error submitting form:', error);
+    } catch (err: any) {
+      console.error('Error submitting form:', err);
       toast({
         title: "Submission Failed",
-        description: "There was an error submitting your form. Please try again.",
+        description: err?.message || "There was an error submitting your form. Please try again.",
         variant: "destructive",
       });
     }
