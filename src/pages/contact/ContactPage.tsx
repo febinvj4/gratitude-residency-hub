@@ -272,6 +272,15 @@ export function ContactPage() {
 
       if (error) throw error;
 
+      // Send email notification
+      const { error: emailError } = await supabase.functions.invoke('send-contact-email', {
+        body: payload,
+      });
+
+      if (emailError) {
+        console.error('Error sending email:', emailError);
+      }
+
       toast({
         title: "Form Submitted Successfully",
         description: "Thank you for your inquiry. We'll get back to you within 24 hours.",
