@@ -10,6 +10,7 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import { Button } from "@/components/ui/button";
+import { ScrollArea } from "@/components/ui/scroll-area";
 import { cn } from "@/lib/utils";
 
 const navigationData = {
@@ -222,80 +223,82 @@ export function Navigation() {
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <div className="lg:hidden border-t bg-background">
-            <div className="px-2 pt-2 pb-3 space-y-1">
-              {/* Simple menu items */}
-              {simpleMenuItems.map((item) => (
-                <Link
-                  key={item.href}
-                  to={item.href}
-                  className="block px-3 py-2 text-sm text-foreground hover:bg-muted rounded-md transition-colors"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {item.name}
-                </Link>
-              ))}
-              
-               {/* Skilled Migration Section */}
-              <div className="space-y-1">
-                <div className="px-3 py-2 text-sm font-medium text-foreground border-b">
-                  Skilled Migration
+            <ScrollArea className="h-[calc(100vh-4rem)]">
+              <div className="px-2 pt-2 pb-3 space-y-1">
+                {/* Simple menu items */}
+                {simpleMenuItems.map((item) => (
+                  <Link
+                    key={item.href}
+                    to={item.href}
+                    className="block px-3 py-2 text-sm text-foreground hover:bg-muted rounded-md transition-colors"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+                
+                 {/* Skilled Migration Section */}
+                <div className="space-y-1">
+                  <div className="px-3 py-2 text-sm font-medium text-foreground border-b">
+                    Skilled Migration
+                  </div>
+                  {navigationData.skilledMigration.countries.map((country) => (
+                    <Link
+                      key={country.href}
+                      to={country.href}
+                      className="block px-6 py-2 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted rounded-md transition-colors"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      {country.name}
+                    </Link>
+                  ))}
                 </div>
-                {navigationData.skilledMigration.countries.map((country) => (
-                  <Link
-                    key={country.href}
-                    to={country.href}
-                    className="block px-6 py-2 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted rounded-md transition-colors"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    {country.name}
-                  </Link>
-                ))}
-              </div>
-              
-              {/* Business Migration Section */}
-              <div className="space-y-1">
-                <div className="px-3 py-2 text-sm font-medium text-foreground border-b">
-                  Business Migration
+                
+                {/* Business Migration Section */}
+                <div className="space-y-1">
+                  <div className="px-3 py-2 text-sm font-medium text-foreground border-b">
+                    Business Migration
+                  </div>
+                  {navigationData.businessMigration.programs.map((program) => (
+                    <Link
+                      key={program.href}
+                      to={program.href}
+                      className="block px-6 py-2 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted rounded-md transition-colors"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      {program.name}
+                    </Link>
+                  ))}
                 </div>
-                {navigationData.businessMigration.programs.map((program) => (
+                
+                {/* Study Abroad Section */}
+                <div className="space-y-1">
                   <Link
-                    key={program.href}
-                    to={program.href}
-                    className="block px-6 py-2 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted rounded-md transition-colors"
+                    to="/study-abroad"
+                    className="block px-3 py-2 text-sm font-medium text-foreground border-b hover:bg-muted rounded-md transition-colors"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    {program.name}
+                    Study Abroad
                   </Link>
-                ))}
-              </div>
-              
-              {/* Study Abroad Section */}
-              <div className="space-y-1">
-                <Link
-                  to="/study-abroad"
-                  className="block px-3 py-2 text-sm font-medium text-foreground border-b hover:bg-muted rounded-md transition-colors"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  Study Abroad
-                </Link>
-                {navigationData.studyAbroad.countries.map((country) => (
-                  <Link
-                    key={country.href}
-                    to={country.href}
-                    className="block px-6 py-2 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted rounded-md transition-colors"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    {country.name}
+                  {navigationData.studyAbroad.countries.map((country) => (
+                    <Link
+                      key={country.href}
+                      to={country.href}
+                      className="block px-6 py-2 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted rounded-md transition-colors"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      {country.name}
+                    </Link>
+                  ))}
+                </div>
+                
+                <div className="pt-4 space-y-2">
+                  <Link to="/contact-us" className="block w-full">
+                    <Button className="w-full">Contact Us</Button>
                   </Link>
-                ))}
+                </div>
               </div>
-              
-              <div className="pt-4 space-y-2">
-                <Link to="/contact-us" className="block w-full">
-                  <Button className="w-full">Contact Us</Button>
-                </Link>
-              </div>
-            </div>
+            </ScrollArea>
           </div>
         )}
       </div>
