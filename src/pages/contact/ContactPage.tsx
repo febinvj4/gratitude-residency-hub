@@ -10,6 +10,7 @@ import { Footer } from "@/components/Footer";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import type { TablesInsert } from "@/integrations/supabase/types";
+import emailjs from "@emailjs/browser";
 
 const countries = [
   { code: "+1", name: "United States", flag: "🇺🇸" },
@@ -268,6 +269,7 @@ export function ContactPage() {
     );
     
     try {
+      // Prepare form data for Supabase
       const payload: TablesInsert<'contact_requests'> = {
         full_name: name,
         email_address: email,
@@ -278,20 +280,37 @@ export function ContactPage() {
         migrate_to: migrateTo || null,
       };
 
+      // Save to Supabase database
       const { error } = await supabase
         .from('contact_requests')
         .insert(payload);
 
       if (error) throw error;
 
-      // Send email notification
-      const { error: emailError } = await supabase.functions.invoke('send-contact-email', {
-        body: payload,
-      });
+      // Prepare EmailJS template parameters with all form data
+      const emailParams = {
+        to_email: "info@grcs.world",
+        from_name: name,
+        from_email: email,
+        phone_number: `${countryCode}${phone}`,
+        qualification: qualification,
+        profession: profession,
+        experience: experience || "Not provided",
+        migrate_to: migrateTo,
+        message: `New contact form submission:\n\nName: ${name}\nEmail: ${email}\nPhone: ${countryCode}${phone}\nQualification: ${qualification}\nProfession: ${profession}\nExperience: ${experience || "Not provided"}\nMigrate To: ${migrateTo}`
+      };
 
-      if (emailError) {
-        console.error('Error sending email:', emailError);
-      }
+      // Send email via EmailJS
+      // TODO: Replace these placeholder values with your actual EmailJS credentials
+      // Get them from: https://dashboard.emailjs.com/
+      const emailjsResponse = await emailjs.send(
+        'YOUR_SERVICE_ID',      // Replace with your EmailJS Service ID
+        'YOUR_TEMPLATE_ID',     // Replace with your EmailJS Template ID
+        emailParams,
+        'YOUR_PUBLIC_KEY'       // Replace with your EmailJS Public Key
+      );
+
+      console.log('EmailJS response:', emailjsResponse);
 
       toast({
         title: "Form Submitted Successfully",
