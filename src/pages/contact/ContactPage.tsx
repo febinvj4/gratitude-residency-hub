@@ -255,6 +255,18 @@ export function ContactPage() {
     e.preventDefault();
     const { name, email, countryCode, phone, qualification, profession, experience, migrateTo } = formData;
     
+    // Show alert with all form data
+    alert(
+      `Form Data:\n\n` +
+      `Full Name: ${name}\n` +
+      `Email: ${email}\n` +
+      `Phone: ${countryCode}${phone}\n` +
+      `Qualification: ${qualification}\n` +
+      `Profession: ${profession}\n` +
+      `Experience: ${experience}\n` +
+      `Migrate To: ${migrateTo}`
+    );
+    
     try {
       const payload: TablesInsert<'contact_requests'> = {
         full_name: name,
