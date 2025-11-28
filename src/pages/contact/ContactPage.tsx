@@ -8,8 +8,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { useToast } from "@/hooks/use-toast";
-import { supabase } from "@/integrations/supabase/client";
-import type { TablesInsert } from "@/integrations/supabase/types";
 import emailjs from "@emailjs/browser";
 
 const countries = [
@@ -256,37 +254,7 @@ export function ContactPage() {
     e.preventDefault();
     const { name, email, countryCode, phone, qualification, profession, experience, migrateTo } = formData;
     
-    // Show alert with all form data
-    alert(
-      `Form Data:\n\n` +
-      `Full Name: ${name}\n` +
-      `Email: ${email}\n` +
-      `Phone: ${countryCode}${phone}\n` +
-      `Qualification: ${qualification}\n` +
-      `Profession: ${profession}\n` +
-      `Experience: ${experience}\n` +
-      `Migrate To: ${migrateTo}`
-    );
-    
     try {
-      // Prepare form data for Supabase
-      const payload: TablesInsert<'contact_requests'> = {
-        full_name: name,
-        email_address: email,
-        phone_number: `${countryCode}${phone}`,
-        highest_qualification: qualification || null,
-        current_profession: profession || null,
-        professional_experience: experience || null,
-        migrate_to: migrateTo || null,
-      };
-
-      // Save to Supabase database
-      const { error } = await supabase
-        .from('contact_requests')
-        .insert(payload);
-
-      if (error) throw error;
-
       // Prepare EmailJS template parameters with all form data
       const emailParams = {
         to_email: "info@grcs.world",
