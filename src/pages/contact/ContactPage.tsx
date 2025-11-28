@@ -301,13 +301,11 @@ export function ContactPage() {
       };
 
       // Send email via EmailJS
-      // TODO: Replace these placeholder values with your actual EmailJS credentials
-      // Get them from: https://dashboard.emailjs.com/
       const emailjsResponse = await emailjs.send(
-        'YOUR_SERVICE_ID',      // Replace with your EmailJS Service ID
-        'YOUR_TEMPLATE_ID',     // Replace with your EmailJS Template ID
+        'service_0hx3ezp',
+        'template_kd60slf',
         emailParams,
-        'YOUR_PUBLIC_KEY'       // Replace with your EmailJS Public Key
+        'x44LMC_AIY8Gt4hZi'
       );
 
       console.log('EmailJS response:', emailjsResponse);
