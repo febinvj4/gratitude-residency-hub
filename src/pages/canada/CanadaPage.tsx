@@ -4,55 +4,45 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle, Clock, MapPin, FileText } from "lucide-react";
 import { Link } from "react-router-dom";
-
-const canadaPrograms = [
-  {
-    title: "Express Entry",
-    description: "Federal skilled worker program for skilled professionals",
-    requirements: ["Skilled occupation", "Language proficiency", "Work experience", "Education"],
-    processingTime: "6-8 months",
-    href: "/canada/express-entry"
-  },
-  {
-    title: "Provincial Nominee Program (PNP)",
-    description: "Provincial nomination for skilled workers and entrepreneurs",
-    requirements: ["Provincial nomination", "Skills assessment", "Language test", "Job offer (some)"],
-    processingTime: "12-18 months",
-    href: "/canada/pnp"
-  },
-  {
-    title: "Atlantic Immigration",
-    description: "Immigration program for Atlantic provinces",
-    requirements: ["Job offer", "Designation letter", "Work experience", "Education"],
-    processingTime: "12-18 months",
-    href: "/canada/atlantic"
-  },
-  {
-    title: "LMIA Work Permit",
-    description: "Labour Market Impact Assessment for foreign workers",
-    requirements: ["Job offer", "LMIA approval", "Work experience", "Language proficiency"],
-    processingTime: "4-16 weeks",
-    href: "/canada/lmia"
-  },
-  {
-    title: "Visitor Visa",
-    description: "Temporary resident visa for tourism and business",
-    requirements: ["Purpose of visit", "Financial support", "Ties to home country"],
-    processingTime: "2-8 weeks",
-    href: "/canada/visitor-visa"
-  },
-  {
-    title: "Study Visa",
-    description: "Study permit for international students",
-    requirements: ["Letter of acceptance", "Financial proof", "Language proficiency", "Health exam"],
-    processingTime: "4-12 weeks",
-    href: "/canada/study-visa"
-  }
-];
-
+const canadaPrograms = [{
+  title: "Express Entry",
+  description: "Federal skilled worker program for skilled professionals",
+  requirements: ["Skilled occupation", "Language proficiency", "Work experience", "Education"],
+  processingTime: "6-8 months",
+  href: "/canada/express-entry"
+}, {
+  title: "Provincial Nominee Program (PNP)",
+  description: "Provincial nomination for skilled workers and entrepreneurs",
+  requirements: ["Provincial nomination", "Skills assessment", "Language test", "Job offer (some)"],
+  processingTime: "12-18 months",
+  href: "/canada/pnp"
+}, {
+  title: "Atlantic Immigration",
+  description: "Immigration program for Atlantic provinces",
+  requirements: ["Job offer", "Designation letter", "Work experience", "Education"],
+  processingTime: "12-18 months",
+  href: "/canada/atlantic"
+}, {
+  title: "LMIA Work Permit",
+  description: "Labour Market Impact Assessment for foreign workers",
+  requirements: ["Job offer", "LMIA approval", "Work experience", "Language proficiency"],
+  processingTime: "4-16 weeks",
+  href: "/canada/lmia"
+}, {
+  title: "Visitor Visa",
+  description: "Temporary resident visa for tourism and business",
+  requirements: ["Purpose of visit", "Financial support", "Ties to home country"],
+  processingTime: "2-8 weeks",
+  href: "/canada/visitor-visa"
+}, {
+  title: "Study Visa",
+  description: "Study permit for international students",
+  requirements: ["Letter of acceptance", "Financial proof", "Language proficiency", "Health exam"],
+  processingTime: "4-12 weeks",
+  href: "/canada/study-visa"
+}];
 export default function CanadaPage() {
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       <Navigation />
       
       {/* Hero Section */}
@@ -99,9 +89,7 @@ export default function CanadaPage() {
           
           {/* Express Entry Section */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold text-foreground mb-6 flex items-center">
-              🚀 Express Entry – Canada's Fastest PR Pathway
-            </h2>
+            <h2 className="text-3xl font-bold text-foreground mb-6 flex items-center">Express Entry – Canada's Fastest PR Pathway</h2>
             <p className="text-muted-foreground mb-6">
               The Express Entry system is a points-based immigration system managed by Immigration, Refugees and Citizenship Canada (IRCC). It is designed to select highly skilled workers for permanent residency and manages applications under three federal programs: Federal Skilled Worker Program (FSW), Federal Skilled Trades Program (FSTP), and Canadian Experience Class (CEC).
             </p>
@@ -163,9 +151,7 @@ export default function CanadaPage() {
 
           {/* PNP Section */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold text-foreground mb-6 flex items-center">
-              🏙️ Provincial Nominee Program (PNP) – Regional PR Pathway
-            </h2>
+            <h2 className="text-3xl font-bold text-foreground mb-6 flex items-center">Provincial Nominee Program (PNP) – Regional PR Pathway</h2>
             <p className="text-muted-foreground mb-6">
               The Provincial Nominee Program (PNP) allows Canadian provinces and territories to nominate immigrants based on their labour market needs. It is an excellent option for candidates who may not score enough points under Express Entry.
             </p>
@@ -206,9 +192,7 @@ export default function CanadaPage() {
 
           {/* AIP Section */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold text-foreground mb-6 flex items-center">
-              ⚓ Atlantic Immigration Program (AIP) – Employer-Driven PR Pathway
-            </h2>
+            <h2 className="text-3xl font-bold text-foreground mb-6 flex items-center">Atlantic Immigration Program (AIP) – Employer-Driven PR Pathway</h2>
             <p className="text-muted-foreground mb-6">
               The Atlantic Immigration Program (AIP) is a permanent residency program created to attract skilled workers and international graduates to Atlantic Canada: Nova Scotia, New Brunswick, Newfoundland and Labrador, and Prince Edward Island.
             </p>
@@ -249,7 +233,7 @@ export default function CanadaPage() {
 
           {/* Which Program Section */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold text-foreground mb-6">🔑 Which Program Should You Choose?</h2>
+            <h2 className="text-3xl font-bold text-foreground mb-6">Which Program Should You Choose?</h2>
             <div className="grid md:grid-cols-3 gap-6">
               <div className="bg-primary/10 rounded-lg p-6">
                 <h3 className="font-semibold text-foreground mb-2">Express Entry:</h3>
@@ -312,7 +296,7 @@ export default function CanadaPage() {
 
           {/* Final Thoughts */}
           <div className="bg-gradient-to-r from-primary/10 to-secondary/30 rounded-lg p-8 text-center">
-            <h2 className="text-2xl font-bold text-foreground mb-4">📢 Final Thoughts</h2>
+            <h2 className="text-2xl font-bold text-foreground mb-4">Final Thoughts</h2>
             <p className="text-muted-foreground mb-6">
               Canada's immigration system is flexible and opportunity-rich, with pathways for every profile. Whether you qualify through Express Entry, PNP, or AIP, each program leads to Canada PR and eventually citizenship.
             </p>
@@ -368,6 +352,5 @@ export default function CanadaPage() {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 }
