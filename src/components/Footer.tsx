@@ -25,7 +25,7 @@ export function Footer() {
           <div className="max-w-md space-y-6 text-center">
             <div>
               
-              <h3 className="text-xl font-semibold mb-2 my-0 py-0">Gratitude Residency & Citizenship</h3>
+              <h3 className="text-xl font-semibold mb-2 my-0 py-0">Gratitude Residency and Citizenship FZE LLC</h3>
               <p className="text-primary-foreground/80 text-sm">
                 Your trusted partner in global immigration and citizenship services. 
                 Making dreams come true for over 8 years.
@@ -35,7 +35,7 @@ export function Footer() {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5" />
-                <span className="text-sm">info@grcs.world</span>
+                <span className="text-sm">info@gratituderesidency.com</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5" />
@@ -43,7 +43,7 @@ export function Footer() {
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="h-5 w-5" />
-                <span className="text-sm">SPC Sharjah, United Arab Emirates</span>
+                <span className="text-sm">Sharjah Publishing City, Al Zahia, Sharjah, United Arab Emirates</span>
               </div>
             </div>
 
